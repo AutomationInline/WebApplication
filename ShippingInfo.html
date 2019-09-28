@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="CSS/Styles.css" />
+    <script type="text/javascript" src="/JS/jquery-3.4.1.min.js"></script>
+    <title>Sasi shopping</title>
+  </head>
+  <body>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="header-left">
+          <img class="logo" src="./Images/logo.png" alt="sasi shopping" />
+        </div>
+        <div class="header-right">
+  
+          <ul>
+            <li> <a onclick="window.location.href='/index.html'">Home</a></li>
+            <li><a  onclick="window.location.href='/Products.html'">Products</a></li>
+            <li><a class="active" onclick="window.location.href='/ShippingInfo.html'">
+                Shipping </a>
+            </li>
+            <li><a onclick="window.location.href='/CheckOut.html'">Cart</a></li>
+          </ul>
+  
+        </div>
+    </div>
+    </nav>
+  </header>
+
+    <h3>Shipping Info</h3>
+    <form id="ShippingInfo" action="/CheckOut.html" method="get">
+    <div>
+      <label for="physAdd" style="margin-left:10px;">
+        <input style="margin:15px; zoom: 1.5;" type="checkbox" id="physAdd" />
+        Use Physical Address
+      </label>
+      <div class="formFields">
+        <label for="iaddress1">Address1 *</label>
+        <input
+          type="text"
+          id="iaddress1"
+          class="shippingInfo"
+          maxlength="100"
+        />
+      <p id="saddressErr" class="warnError">&nbsp;</p>
+      </div>
+      <div class="formFields">
+        <label for="iaddress2">Address2</label>
+        <input type="text" id="iaddress2" class="shippingInfo"
+        maxlength="100" />
+        <p id="validate"></p>
+
+      </div>
+      <div class="formFields">
+        <label for="icity">City *</label>
+        <input
+          type="text"
+          id="icity"
+          class="shippingInfo"
+          maxlength="100"
+        />
+      <p id="scityErr" class="warnError">&nbsp;</p>
+
+      </div>
+      <div class="formFields">
+        <label for="iselectState">State *</label>
+        <Select id="iselectState" class="shippingInfo" >
+          <option>Please choose state</option>
+        </Select>
+      <p id="sstateErr" class="warnError">&nbsp;</p>
+
+      </div>
+      <div class="formFields">
+        <label for="izip">Zip *</label>
+        <input
+          type="text"
+          id="izip"
+          class="shippingInfo"
+          maxlength="9"
+          minlength="5"
+        />
+      <p id="szipErr" class="warnError">&nbsp;</p>
+      </div>
+    <input id="prodsubmit" type="submit" value="Go CheckOut" />
+    <input type="reset" value="Clear" id="Resetbtn" />
+  </form>
+  <footer></footer>
+
+  </body>
+  <script src="/JS/shippingInfo.js"></script>
+</html>

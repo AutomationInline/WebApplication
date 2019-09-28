@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Banana",
+    "price": 1.5,
+    "unit": "lb"
+  },
+  {
+    "name": "Apple",
+    "price": 2,
+    "unit": "lb"
+  },
+  {
+    "name": "Kiwi",
+    "price": 3.5,
+    "unit": "lb"
+  },
+  {
+    "name": "Oranges",
+    "price": 3,
+    "unit": "lb"
+  },
+  {
+    "name": "Grapes",
+    "price": 1.66,
+    "unit": "lb"
+  },
+  {
+    "name": "Apricot",
+    "price": 4,
+    "unit": "lb"
+  },
+  {
+    "name": "Avocodo",
+    "price": 2.5,
+    "unit": "lb"
+  },
+  {
+    "name": "Cherry",
+    "price": 3.12,
+    "unit": "lb"
+  }
+]

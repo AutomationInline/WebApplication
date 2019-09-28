@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="CSS/Styles.css" />
+    <title>Sasi shopping</title>
+  </head>
+
+  <body>
+<header id="header">
+  <div class="container">
+    <nav>
+      <div class="header-left">
+        <img class="logo" src="./Images/logo.png" alt="sasi shopping" />
+      </div>
+      <div class="header-right">
+
+        <ul>
+          <li> <a onclick="window.location.href='/index.html'">Home</a></li>
+          <li><a onclick="window.location.href='/Products.html'">Products</a></li>
+          <li><a onclick="window.location.href='/ShippingInfo.html'">
+              Shipping </a>
+          </li>
+          <li><a class="active" onclick="window.location.href='/CheckOut.html'">Cart</a></li>
+        </ul>
+
+      </div>
+  </div>
+  </nav>
+</header>
+
+
+    <h3>CheckOut</h3>
+    <form id="checkOutForm" action="/Summary.html" method="get">
+    <div class="formFields">
+      <label for="shopamnt">Total Shopping Amount</label>
+      <input type="number" id="shopamnt" class="CheckOut" disabled/>
+    </div>
+
+    <div class="formFields">
+      <label for="tax">Total Tax</label>
+      <input type="number" id="tax" class="CheckOut" disabled/>
+    </div>
+    <div class="formFields">
+      <label for="shippingCharges">Total Shipping Charges</label>
+      <input type="number" id="shippingCharges" class="CheckOut" disabled/>
+    </div>
+    <div class="formFields">
+      <label for="TotalAmountDue">Total Amount Due</label>
+      <input type="number" id="TotalAmountDue" class="CheckOut"  disabled/>
+    </div>
+    <div class="formFields">
+      <label for="payment">Payment</label>
+      <Select id="payment" class="CheckOut" required>
+        <option>VISA</option>
+        <option>MasterCard</option>
+        <option>American Express</option>
+      </Select>
+    </div>
+
+    <div class="formFields">
+      <label for="cardnumber">Card Number *</label>
+      <input
+        type="number"
+        id="cardnumber"
+        class="CheckOut" 
+        maxlength="16"
+        minlength="16"      />
+    <p id="cardErr" class="warnError">&nbsp;</p>
+
+    </div>
+    <div class="formFields">
+      <label for="CardExpiration">Card Expiration *</label>
+      <input
+        type="text"
+        id="CardExpiration"
+        class="CheckOut" 
+      />
+      <p id="cardExpErr" class="warnError">&nbsp;</p>
+
+    <div style="margin-bottom:2em">
+        <label for="agreement" style="margin-left:10px;">
+            <input style=" margin-left:2em;zoom: 1.5;" type="checkbox" id="agreement" />
+           <p style="display:inline-block"id="agreementErr" class="warnError">&nbsp;</p>
+            I agree and authorize the amount to be charged to my credit card
+        </label>
+    </div>
+    <input type="submit" value="Submit Order"  />
+    <input type="reset" value="Clear" id="Resetbtn" />
+
+    </form>
+    <footer></footer>
+  </body>
+  <script src="/JS/checkout.js"></script>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="/JS/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/CSS/Styles.css" />
+    <title>Sasi shopping</title>
+  </head>
+  <body >
+    <header id="header">
+      <div class="container">
+      <nav>
+        <div class="header-left">
+          <img class="logo" src="./Images/logo.png" alt="sasi shopping" />
+        </div>
+        <div class="header-right">
+          <ul>
+            <li> <a class = "active" onclick="window.location.href='/index.html'">Home</a></li>
+            <li><a  onclick="window.location.href='/Products.html'">Products</a></li>
+            <li><a onclick="window.location.href='/ShippingInfo.html'">
+              Shipping </a>
+            </li>
+            <li><a onclick="window.location.href='/CheckOut.html'">Cart</a></li>
+          </ul>
+         
+        </div>
+      </div>
+      </nav>
+    </header>
+    <h3>
+      Enter User Information
+    </h3>
+  <form id="userInfoForm"  action="/Products.html" method="get">
+      <div class="formFields">
+        <label for="fullName">Full Name *</label>
+        <input
+          type="text"
+          id="fullName"
+          name="Name"
+          class="userdata req"
+          maxlength="100"
+          value=""
+        />
+      <p id="NameErr" class="warnError">&nbsp;</p>
+      </div>
+      <div class="formFields">
+        <label for="address1">Address1 *</label>
+        <input
+          type="text"
+          id="address1"
+          class="userdata req"
+          maxlength="100"
+          value=""
+        />
+      <p id="addressErr" class="warnError">&nbsp;</p>
+      </div>
+      <div style="margin-bottom:35px" class="formFields">
+        <label for="address2">Address2</label>
+        <input
+          type="text"
+          id="address2"
+          class="userdata"
+          maxlength="100"
+          value=""
+        />
+        <p id="NoValidate"></p>
+      </div>
+      <div class="formFields">
+        <label for="city">City *</label>
+        <input
+          type="text"
+          id="city"
+          class="userdata req"
+          maxlength="100"
+          value=""
+        />
+      <p id="cityErr" class="warnError">&nbsp;</p>
+      </div>
+      <div class="formFields">
+        <label for="stateSelect">State *</label>
+        <Select id="selectState" class="userdata select-css">
+          <option  value="Please choose state">Please choose state</option>
+        </Select>
+      <p id="stateErr" class="warnError">&nbsp;</p>
+      </div>
+      <div class="formFields">
+        <label for="zip">Zip *</label>
+        <input
+          type="number"
+          id="zip"
+          class="userdata req"
+          maxlength="9"
+          minlength="5"
+          value=""
+        />
+      <p id="zipErr" class="warnError">&nbsp;</p>
+      </div>
+      <div class="tooltipSug formFields">
+        <label for="phone">Phone *</label>
+        <input
+          type="tel"
+          id="phone"
+          class="userdata req"
+          maxlength="12"
+          value=""
+        />
+        <small style="margin-left:30px; margin-bottom:10px;padding-bottom: -10px">Format: xxx-xxx-xxxx</small>
+      <p id="phnErr" class="warnError">&nbsp;</p>
+
+
+      </div>
+      <div class="formFields">
+        <label for="email">Email *</label>
+        <input
+          type="email"
+          id="email"
+          class="userdata req"
+          maxlength="100"
+          value=""
+        />
+      <p id="emailErr" class="warnError">&nbsp;</p>
+      </div>
+      <input
+        id="submit"
+        type="submit"
+        value="Go Products"
+      />
+      <input type="reset" value="Clear" id="Resetbtn" />
+    </form>
+    <footer></footer>
+  </body>
+  <script src="JS/index.js"></script>
+</html>
